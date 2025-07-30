@@ -7,7 +7,8 @@ fun main() {
     val presentValue = 70_000.0
 
     // Годовая процентная ставка 16.7% (r)
-    val annualRate = 0.167
+    val rate = 16.7
+    val annualRate = rate / 100
 
     // Срок вклада в годах (n)
     val years = 20
