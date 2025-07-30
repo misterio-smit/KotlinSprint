@@ -13,6 +13,6 @@ fun main() {
 fun formatDuration(seconds: Int): String {
     val hours = seconds / SECOND_IN_HOURS
     val minutes = (seconds % SECOND_IN_HOURS) / MINUTE_IN_HOURS
-
-    return "%d:%02d".format(hours, minutes)
+    val secs = seconds % MINUTE_IN_HOURS
+    return "%02d:%02d:%02d".format(hours, minutes, secs)
 }
