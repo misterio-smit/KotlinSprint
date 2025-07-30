@@ -1,5 +1,9 @@
 package org.example.lesson_1
 
+
+const val SECOND_IN_HOURS = 3600
+const val MINUTE_IN_HOURS = 60
+
 fun main() {
 
     val seconds: Int = 6480
@@ -7,8 +11,8 @@ fun main() {
 }
 
 fun formatDuration(seconds: Int): String {
-    val hours = seconds / 3600
-    val minutes = (seconds % 3600) / 60
-    val secs = seconds % 60
-    return "%d:%02d:%02d".format(hours, minutes, secs)
+    val hours = seconds / SECOND_IN_HOURS
+    val minutes = (seconds % SECOND_IN_HOURS) / MINUTE_IN_HOURS
+
+    return "%d:%02d".format(hours, minutes)
 }
