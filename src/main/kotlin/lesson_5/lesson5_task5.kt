@@ -10,7 +10,7 @@ fun main() {
 
     val userNumbers = List(3) {
         print("Число ${it + 1}: ")
-        readLine()!!.toInt()
+        readln().toInt()
     }.sorted()
 
     val matches = winningNumbers.intersect(userNumbers).size
